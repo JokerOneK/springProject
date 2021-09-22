@@ -11,28 +11,20 @@ public class TestSpring {
                 ClassPathXmlApplicationContext("applicationContext.xml"); // Должен лежать в папке resources
 
 
-        ClassicalMusic classicalMusic = context.getBean("musicBean", ClassicalMusic.class);
-
-        System.out.println(classicalMusic.getSong());
-
-
-//        ClassicalMusic classicalMusic1 = context.getBean("musicBean", ClassicalMusic.class);
-//        System.out.println(classicalMusic1.getSong());
-
-
-//        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-//        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        Music music = context.getBean("musicBean", Music.class);
+//        Music music1 = context.getBean("classicalMusic", Music.class);
 //
-//        boolean comparison = firstMusicPlayer == secondMusicPlayer;
-//        System.out.println(comparison);
+//        MusicPlayer musicPlayer = new MusicPlayer(music);
+//        musicPlayer.playMusic();
 //
-//        System.out.println(firstMusicPlayer);
-//        System.out.println(secondMusicPlayer);
-//
-//        firstMusicPlayer.setVolume(50);
-//
-//        System.out.println(firstMusicPlayer.getVolume());
-//        System.out.println(secondMusicPlayer.getVolume());
+//        MusicPlayer musicPlayer1 = new MusicPlayer(music1);
+//        musicPlayer1.playMusic();
+
+//        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        musicPlayer.playMusic();
+
+        Computer computer = context.getBean("computer", Computer.class);
+        System.out.println(computer);
 
         context.close();
     }
