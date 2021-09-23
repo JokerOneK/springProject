@@ -17,7 +17,7 @@ public class Computer {
 
     public String toString() {
         return "Computer " +id +
-                "  " + musicPlayer.playMusic();
+                "  " + musicPlayer.playMusic(enumMusic.CLASSICAL);
     }
 
 

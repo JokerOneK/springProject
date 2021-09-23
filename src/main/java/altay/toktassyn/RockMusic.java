@@ -3,10 +3,22 @@ package altay.toktassyn;
 
 import org.springframework.stereotype.Component;
 
-@Component("musicBean")
+import java.util.ArrayList;
+import java.util.Random;
+
+@Component
 public class RockMusic implements Music{
+    Random random = new Random();
+
+    ArrayList<String> song = new ArrayList<>();
+
+
     @Override
     public String getSong() {
-        return "Wind Crie Mary";
+        song.add("First rock melody");
+        song.add("Second rock melody");
+        song.add("Third rock melody");
+
+        return song.get(random.nextInt(3));
     }
 }
